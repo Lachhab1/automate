@@ -1,0 +1,228 @@
+/* font used */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* start */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 16px;
+	background-color: #fff;
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+}
+.visible-xs {
+	display: none;
+}
+/* wrapper_start */
+header {
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: calc(100vh - 102px);
+}
+/* navigation_bar*/
+nav.container {
+	height: 9vh;
+	padding: 1rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+}
+nav a {
+	text-decoration: none;
+	color: aliceblue;
+}
+.container ul {
+	list-style: none;
+	display: flex;
+}
+.container .nav-rigth {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-left: 8vw;
+}
+.container .nav-rigth li {
+	display: flex;
+	justify-content: space-evenly;
+	align-self: center;
+	width: fit-content;
+	margin-left: 2rem;
+}
+.brand {
+	display: flex;
+	align-self: center;
+	font-size: 2.5em;
+}
+.car-text {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+.highlited {
+	background-color: #00c2ff;
+	padding: 1rem;
+}
+/* navigation_bar end */
+/* div.container start */
+.main-container {
+	width: 50vw;
+	margin: auto auto;
+	padding: 1.5rem;
+}
+.main-container h1 {
+	color: #00c2ff;
+	font-size: 4rem;
+}
+.main-container p {
+	font-size: 2rem;
+}
+.main-container a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.7rem;
+}
+/* div.container end */
+/* footer.containet start  */
+footer {
+	position: absolute;
+	bottom: 0;
+	background-color: #000;
+	width: 100vw;
+	height: 102px;
+}
+footer .container {
+	width: 75vw;
+	margin: 2.5vh auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #fff;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+.content .title {
+	color: #00c2ff;
+}
+.content p {
+	margin: 0;
+}
+/* footer.containet end  */
+/* resposive dessign start */
+@media (min-width: 992px) {
+	header {
+		background-image: url("../images/car-bg.jpg");
+	}
+}
+@media (min-width: 767px) and (max-width: 991px) {
+	header {
+		background-image: url("../images/car-bg-small.jpg");
+		background-size: cover;
+		background-position: center center;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-height: calc(100vh - 102px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+	.container .nav-rigth {
+		display: flex;
+		align-items: center;
+		font-size: 0.7rem;
+		font-weight: 400;
+		margin-left: 3vw;
+	}
+}
+@media (max-width: 767px) {
+	header {
+		background-image: url("../images/car-bg-smaller.jpg");
+		background-size: cover;
+		background-position: center center;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-height: calc(100vh - 102px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+	.brand {
+		display: flex;
+		align-self: center;
+		font-size: 1.5em;
+	}
+	.car-text {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+	}
+	.content {
+		font-size: .9rem;
+		margin: 2rem auto 0;
+		text-align: center;
+	}
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	nav .highlited {
+		display: none;
+	}
+	.main-container {
+		width: 50vw;
+		margin: auto auto;
+		padding: 1rem;
+	}
+	.main-container h1 {
+		color: #00c2ff;
+		font-size: 2rem;
+	}
+	.main-container p {
+		font-size: 1rem;
+	}
+	.main-container a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 0.9rem;
+	}
+	footer {
+		position: absolute;
+		bottom: 0;
+		top: 85vh;
+		background-color: #000;
+		width: 100vw;
+		height: fit-content;
+	}
+	footer .container {
+		display: flex;
+		flex-direction: column;
+	}
+	.visible-xs {
+		display: inline-block;
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+}
+/* resposive dessign end */
+
+/* wrapper_end */
